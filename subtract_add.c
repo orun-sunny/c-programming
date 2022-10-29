@@ -1,16 +1,27 @@
 #include <stdio.h>
 int main()
 {
-    int a,b,sum,sub,mult;
-    scanf("%d %d", &a,&b);
-    sum = a+b;
-    sub=a-b;
-    mult= a*b;
+    int num1,num2,num3;
+    printf("Enter three numbers\n");
+    scanf("%d %d %d",&num1,&num2,&num3);
+    if(num1<num2 && num1<num3){
+        printf("\n%d is the smallest",num1);
+    }
+    else if(num2<num3){
+        printf("\n%d is the smallest",num2);
+    }
+    else{
+        printf("\n%d is the smallest",num3);
+    }
+    if(num1>num2 && num1>num3){
+        printf("\n%d is largest",num1);
+    }
+    else if(num2>num3){
+        printf("\n%d is largest",num2);
+    }
+    else{
+        printf("\n%d is largest",num3);
+    }
 
-    printf("The sum of the given numbers : %d\n", sum);
-    printf("The difference of the given numbers : %d\n", sub);
-    printf("The product of the given numbers : %d\n", mult);
     return 0;
-
-
 }
