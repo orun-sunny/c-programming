@@ -2,7 +2,7 @@
 int main()
 {
     int N,x;
-    int arr [200001];
+    int arr [21];
     int i;
     scanf("%d",&N);
     for(i=1;i<N;i++)
