@@ -1,22 +1,19 @@
-#include <stdio.h>
+#include<stdio.h>
 int main()
 {
-    int N,x;
-    int arr [21];
-    int i;
-    scanf("%d",&N);
-    for(i=1;i<N;i++)
+    int n=100;
+    int sum=0;
+    int k,i,a,b,c,d;
+    scanf("%d",&n);
+    //int solved=0;
+    for(i=1; i<=n; i++)
     {
-       scanf("%d",&x);
-       arr[x] =1;
+        scanf("%d %d %d %d",&sum,&a,&b,&c);
+        d=sum-(a+b+c);
+
+
     }
-    for(i=1;i<N;i++)
-    {
-     if(arr[i] ==0)
-     {
-         printf("%d\n",i);
-         break;
-     }
-    }
+    printf("%d\n",d);
+
     return 0;
 }

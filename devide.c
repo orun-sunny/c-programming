@@ -1,34 +1,36 @@
-#include <stdio.h>
-int main() {
-	int x, y;
-	int div_result;
-    printf("Input two numbers: ");
-	printf("\n Enter the first number: ");
-    scanf("%d", &x);
-    printf(" Enter the first number: ");
-    scanf("%d", &y);
+#include<stdio.h>
+int main()
+{
+    int N;
+    scanf("%d",&N);
 
-   if(y != 0)
-     {
-   		div_result = x/y;
-		printf("%d\n The first number is divisible by the second number", div_result);
-	 } else if(x!= 0)
-	 {
+    int a[N], arr1[N], arr2[N], i, pos, k1 = 0, k2 = 0;
 
-        div_result = y/x;
-        printf("%d\n The second number is divisible by the first number", div_result);
+    //printf("Enter %d integer numbers\n", N);
+    for(i = 0; i < N; i++)
+        scanf("%d", &a[i]);
 
-    }
+    printf("Enter position to split the array in to Two\n");
+    scanf("%d", &pos);
 
-
-
-
-    else
+    for(i = 0; i < N; i++)
     {
-	 		printf("Division not possible.\n");
+        if(i < pos)
+            arr1[k1++] = a[i];
+        else
+            arr2[k2++] = a[i];
     }
 
 
-  return 0;
-}
+    printf("\nElements of First Array -> arr1[%d]\n", k1);
+    for(i = 0; i < k1; i++)
+        printf("%d\n", arr1[i]);
 
+    printf("\nElements of Second Array -> arr2[%d]\n", k2);
+    for(i = 0; i < k2; i++)
+        printf("%d\n", arr2[i]);
+
+    printf("\n");
+
+    return 0;
+}
