@@ -1,53 +1,56 @@
 #include<stdio.h>
 int main()
 {
-    long long int ara[105];
-    long long int n,i,j;
-    char c;
-    int counter=0;
-    scanf("%d%% %c",&n,&c);
-    for(i=1; i <= n; i++)
+
+    long long int t,i,j;
+
+
+
+
+    scanf("%lld",&t);
+    long long int ara[t];
+
+    for(i=1; i <=t; i++)
     {
-        scanf("%d%%",&ara[105]);
-        if(ara[i]%i==0)
-        {
+        scanf("%lld",&ara[i]);
+        //printf("%d",ara[i]);
 
-
-            counter=1;
-            for(j=1; j<=i/2; j++)
-            {
-                if(i%j==0)
-                {
-                    counter=0;
-                    break;
-                }
-                if(counter==1)
-                {
-                    printf("Yes");
-                }
-                else
-                {
-                    printf("No");
-                }
-            }
-
-
-        }
 
     }
 
-    // for(j=1; j<=i; j++)
-    // {
-
-    //if(num%j==0)
-
-    //{
-    //counter=counter+1;
-
-    //  }
 
 
-    //}
+    for(i=1; i<=t; i++)
+    {
+        if (ara[i] == 0 || ara[i] == 1)
+        {
+            counter= 1;
+        }
+        for (j=2; j<ara[i]; j++)
+        {
+            if( ara[i]%j==0)
+            {
+                counter=1;
+
+                break;
+            }
+        }
+
+
+        if(counter==0)
+        {
+            printf("Yes");
+        }
+        else
+            printf("\nNo");
+
+    }
+
+
+
+
+
+
 
 
 

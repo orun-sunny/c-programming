@@ -1,14 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
 
-int main()
-{
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
     int n;
-    int k=100;
+    int k=101;
     int i;
-
-    int ara[n];
-    int ans=0;
     scanf("%d",&n);
+    int ara[n];
+
+
 
 
     /* Outer loop */
@@ -18,7 +22,7 @@ int main()
     }
 
 
-    int m=ara[0];
+    int m =-1;
     for(i=0;i<n;i++)
     {
         if(ara[i]>m)
@@ -36,7 +40,13 @@ int main()
 
 
 
-    printf("%d",m);
+    //printf("%d\n",m);
 
+        for(i=0; i<n; i++)
+    {
+       int v = m -ara[i];
+       printf("%d ",v);
+
+    }
     return 0;
 }

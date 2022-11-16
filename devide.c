@@ -1,36 +1,29 @@
-#include<stdio.h>
+#include <stdio.h>
+
+
 int main()
 {
-    int N;
-    scanf("%d",&N);
-
-    int a[N], arr1[N], arr2[N], i, pos, k1 = 0, k2 = 0;
-
-    //printf("Enter %d integer numbers\n", N);
-    for(i = 0; i < N; i++)
-        scanf("%d", &a[i]);
-
-    printf("Enter position to split the array in to Two\n");
-    scanf("%d", &pos);
-
-    for(i = 0; i < N; i++)
+    int n;
+    scanf("%d",&n);
+    int arr[n+1];
+    for(int i=1; i<=n; i++)
     {
-        if(i < pos)
-            arr1[k1++] = a[i];
-        else
-            arr2[k2++] = a[i];
+        scanf("%d",&arr[i]);
     }
-
-
-    printf("\nElements of First Array -> arr1[%d]\n", k1);
-    for(i = 0; i < k1; i++)
-        printf("%d\n", arr1[i]);
-
-    printf("\nElements of Second Array -> arr2[%d]\n", k2);
-    for(i = 0; i < k2; i++)
-        printf("%d\n", arr2[i]);
-
-    printf("\n");
+    int  k;
+    scanf("%d",&k);
+    for(int i=k+1; i<=n; i++)
+    {
+        printf("%d ",arr[i]);
+    }
+    for(int i=1; i<=k; i++)
+    {
+        printf("%d",arr[i]);
+        if(i<k)
+            printf(" ");
+        if(i==k)
+            printf("\n");
+    }
 
     return 0;
 }
