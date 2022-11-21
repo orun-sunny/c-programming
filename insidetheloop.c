@@ -1,45 +1,73 @@
-// below we have a simple C program for bubble sort
 #include <stdio.h>
-
-void bubbleSort(int arr[], int n)
-{
-    int i, j, temp;
-    for(i = 0; i < n; i++)
-    {
-        for(j = 0; j < n-i-1; j++)
-        {
-            if( arr[j] > arr[j+1])
-            {
-                // swap the elements
-                temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-            }
-        }
-    }
-
-    // print the sorted array
-    printf("Sorted Array: ");
-    for(i = 0; i < n; i++)
-    {
-        printf("%d  ", arr[i]);
-    }
-}
-
 int main()
 {
-    int arr[100], i, n, step, temp;
-    // ask user for number of elements to be sorted
-    printf("Enter the number of elements to be sorted: ");
-    scanf("%d", &n);
-    // input elements if the array
-    for(i = 0; i < n; i++)
-    {
-        printf("Enter element no. %d: ", i+1);
-        scanf("%d", &arr[i]);
-    }
-    // call the function bubbleSort
-    bubbleSort(arr, n);
+    int A[50][50];
+    int i, j, M, N;
+    int size;
+    int rowsum, columnsum, diagonal;
+    int magic = 0;
 
-    return 0;
+    printf("Enter row and column of matrix:\n");
+    scanf("%d %d", &M, &N);
+    if(M==N)
+    {
+        printf("Enter the full matrix \n");
+        for(i=0; i<M; i++)
+        {
+            for(j=0; j<N; j++)
+            {
+                scanf("%d", &A[i][j]);
+            }
+        }
+
+
+
+// calculate diagonal sum
+        diagonal = 0;
+        for(i=0; i<M; i++)
+        {
+            for(j=0; j<N; j++)
+            {
+                if(i==j)
+                {
+                    diagonal = diagonal + A[i][j];
+                }
+            }
+        }
+
+// calculate row sum
+        for(i=0; i<M; i++)
+        {
+            rowsum = 0;
+            for(j=0; j<N; j++)
+            {
+                rowsum = rowsum + A[i][j];
+            }
+            if(rowsum != diagonal)
+            {
+                printf("\n NO");
+                return;
+            }
+        }
+
+// calculate column sum
+        for(i=0; i<M; i++)
+        {
+            columnsum = 0;
+            for(j=0; j<N; j++)
+            {
+                columnsum = columnsum + A[j][i];
+            }
+            if(columnsum != diagonal)
+            {
+                printf("\nNO");
+                return;
+            }
+        }
+
+        printf("\nYES");
+    }
+
+  return 0;
+
 }

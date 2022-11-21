@@ -1,59 +1,9 @@
 #include<stdio.h>
 int main()
 {
-
-    long long int t,i,j;
-
-
-
-
-    scanf("%lld",&t);
-    long long int ara[t];
-
-    for(i=1; i <=t; i++)
-    {
-        scanf("%lld",&ara[i]);
-        //printf("%d",ara[i]);
-
-
-    }
-
-
-
-    for(i=1; i<=t; i++)
-    {
-        if (ara[i] == 0 || ara[i] == 1)
-        {
-            counter= 1;
-        }
-        for (j=2; j<ara[i]; j++)
-        {
-            if( ara[i]%j==0)
-            {
-                counter=1;
-
-                break;
-            }
-        }
-
-
-        if(counter==0)
-        {
-            printf("Yes");
-        }
-        else
-            printf("\nNo");
-
-    }
-
-
-
-
-
-
-
-
-
+    int array[2][3]= {{10,20,30},{40,50,60}},i=1,j=0;
+    array[i][j]=array[j][i];
+    printf("%d,%d",array[i][j],array[j+1][i+1]);
 
     return 0;
 }
