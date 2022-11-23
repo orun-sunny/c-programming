@@ -1,49 +1,28 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
 
 int main()
-
 {
-
-    int n,a, b,res;
-    //int s[]=<20;
-
-    char c[n];
-    scanf("%s",&c);
-    //int n;
-    //scanf("%d",&n);
-    //printf ("Enter any one operator +, -, *, / n");
-    // char c;
-
-
-    //scanf("%c", &c);
-
-    printf ("\n Enter two numbers \n");
-    scanf ("%d %d",&a, &b);
-    for(int i=0; i<n-1; i++)
+    char k[21];
+    int a,b;
+    scanf("%s",&k);
+    scanf("%d %d",&a,&b);
+    int length = strlen(k);
+   //  printf("%lld\n",len);
+     int sum = 0;
+    for (int i=0; i<length; i++)
     {
-        if (c=='+')
-        {
-            res=a+b;
-            printf("\n The sum is %d",res);
-        }
+        if(k[i]=='+')
+            sum += (a+b);
+           // printf("%lld\n",a+b);
 
+        else if(k[i]=='*')
+            sum += (a*b);
 
-
-        else if(c== '*')
-        {
-            res=a*b+(a+b);
-            printf("\n The product is %d",res);
-        }
-
-
-        else
-        {
-            printf ("\n Invalid entry");
-        }
     }
-
-
+    printf("%d\n",sum);
 
     return 0;
-
 }
