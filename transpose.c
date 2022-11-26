@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void transpose(int a[3][3]);
+void trans(int a[3][3]);
 
 int main()
 {
@@ -15,14 +15,19 @@ int main()
             scanf("%d ", &a[i][j]);
         }
     }
-    transpose(a);
+    trans(a);
     return 0;
 }
 
-void transpose(int a[3][3])
+//1 2 3
+//2 3 4
+//4 5 6
+//4 5 6
+
+void trans(int a[3][3])
 {
     int i, j;
-    printf("Transpose Matrix\n");
+    printf("Trans Matrix\n");
     for(i=0; i<3; i++)
     {
         for(j=0; j<3; j++)

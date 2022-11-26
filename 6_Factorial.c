@@ -1,39 +1,39 @@
 #include <stdio.h>
+int two_factorial(int fac1, int fac2);
+int factorial(int fac1);
 
-int factorial(int f1);
-int two_factorial(int f1, int f2);
 
 int main()
 {
-   int f1;
-   scanf("%d", &f1);
+   int fac1;
+   scanf("%d", &fac1);
 
-   int a = factorial(f1);
-   printf("Factorial = %d\n", a);
+   int p = factorial(fac1);
+   printf("Facto = %d\n", p);
 
-   int f2, f3;
-   scanf("%d %d", &f2, &f3);
-   int b = two_factorial(f2, f3);
-   printf("Factorial ratio = %d", b);
+   int fac2, fac3;
+   scanf("%d %d", &fac2, &fac3);
+   int q = two_factorial(fac2, fac3);
+   printf("Facto check = %d", q);
 
    return 0;
 }
 
-int factorial(int f1)
+int factorial(int fac1)
 {
    int i=1, x=1;
-   for(i=1; i<=f1; i++)
+   for(i=1; i<=fac1; i++)
    {
       x *= i;
    }
    return x;
 }
 
-int two_factorial(int f1, int f2)
+int two_factorial(int fac1, int fac2)
 {
-   int first = factorial(f1);
-   int second = factorial(f2);
+   int first = factorial(fac1);
+   int second = factorial(fac2);
 
-   int ratio = first / second;
-   return ratio;
+   int ratio_range = first / second;
+   return ratio_range;
 }
