@@ -1,4 +1,6 @@
 #include <stdio.h>
+
+
 int two_factorial(int fac1, int fac2);
 int factorial(int fac1);
 
