@@ -1,20 +1,10 @@
-#include <stdio.h>
-
-int sum(int a, int b)
+struct employee
 {
-  return a + b;
-}
+ char name[100];
+ int age;
+ float salary;
+ char department[50];
+} employee_one = {"Jack", 30, 1234.5, "Sales"};
 
-// Driver code
-int main()
-{
-  int a, b;
-  printf("Enter a and b");
-  scanf("%d %d", &a, &b);
-
-  // function call
-  printf("Sum of %d and %d is: %d",
-          a, b, sum(a, b));
-
-  return 0;
-}
+struct employee *ptr = &employee_one;
+int age = ptr->age;

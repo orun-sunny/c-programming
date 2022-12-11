@@ -5,7 +5,7 @@
 int is_available(char str[],int len,int i)
 {
     int count =0;
-    for(int j=0; j<len; j++)
+    for(int j=0; j<len; j++)a
     {
         if( 97+i == str[j])
         {
