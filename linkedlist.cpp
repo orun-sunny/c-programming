@@ -35,18 +35,18 @@ class LinkedList
 
 };
 
- int main()
- {
-     LinkedList l;
-     l.InsertAtHead(10);
-        l.InsertAtHead(30);
-     l.InsertAtHead(20);
-     l.InsertAtHead(30);
+int main()
+{
+    LinkedList l;
+    l.InsertAtHead(10);
+    l.InsertAtHead(30);
+    l.InsertAtHead(20);
+    l.InsertAtHead(30);
 
-     l.Traverse();
-     l.SearchDistinctValue(10);
-     l.SearchDistinctValue(5);
-     l.SearchAllValue(10);
+    l.Traverse();
+    l.SearchDistinctValue(10);
+    l.SearchDistinctValue(5);
+    l.SearchAllValue(10);
 
-     return 0;
- }
+    return 0;
+}
