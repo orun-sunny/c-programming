@@ -78,7 +78,7 @@ class LinkedList {
    }
    void print() {
       if( head == NULL ) {
-         cout<<"Doubly linked list empty!\n";
+         cout<<"this Doubly linked list empty!\n";
          return;
       }
 
@@ -92,7 +92,7 @@ class LinkedList {
 
    void Merge( LinkedList a ) {
       if(a.sz == 0) {
-         cout<<"Doubly linked list empty!\n";
+         cout<<"this Doubly linked list empty!\n";
          return;
       }
       Node* b = a.head;
