@@ -56,7 +56,7 @@ public:
         adj_list[u].push_back({v, w});
       }
 
-      int ans = dijks(k, n);
+      int ans = dijkst(k, n);
 
       return ans;
     };
