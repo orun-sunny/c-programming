@@ -1,13 +1,21 @@
-
 #include <stdio.h>
 int main()
 {
-    int n;
-    scanf("%d",&n);
-    int s;
-    s=(n/5) +(n%5!=0);
-    printf("%d\n",s);
-
-
+    int n,h,i,x;
+    scanf("%d %d",&n,&h);
+   int  w=0;
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&x);
+        if(x>h){
+            w+=2;
+        }
+        else
+        {
+            w++;
+        }
+    }
+    printf("%d\n",w);
     return 0;
+
 }
