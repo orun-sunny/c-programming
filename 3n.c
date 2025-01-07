@@ -1,19 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int n;
-    printf("enter a number: ");
-    scanf("%d",&n);
-    while(n>1)
-    {
-        printf("%d\n",n);
-        if(n%2==0){
-            n=n/2;
+    int n,i;
 
-        }
-        else{
-            n=3*n+1;
-        }
+    scanf("%d",&n);
+    if(n>0)
+    {
+            for(i=1;i<=n;i++)
+    {
+          printf("%d\n",i);
     }
+    }
+    else{
+        for(i=1;i<=n;i--)
+
+    }
+
+
+
+
     return 0;
 }
