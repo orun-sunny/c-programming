@@ -1,21 +1,24 @@
+
 #include <stdio.h>
+
 int main()
 {
-    int n,h,i,x;
-    scanf("%d %d",&n,&h);
-   int  w=0;
-    for(i=0;i<n;i++)
+    int s,n;
+    scanf("%d",&n);
+    if(n%5==0)
     {
-        scanf("%d",&x);
-        if(x>h){
-            w+=2;
-        }
-        else
-        {
-            w++;
-        }
+        s=n/5;
     }
-    printf("%d\n",w);
+    else
+    {
+        s=(n/5)+1;
+    }
+    printf("%d\n",s);
+
+
+
+
+
     return 0;
 
 }
