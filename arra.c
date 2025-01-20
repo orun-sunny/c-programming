@@ -1,20 +1,31 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int arr[5]= {1,2,3,4,5},i=5,j;
-    while(i>=1)
+
+
+    int N=6;
+    int ara [N];
+    int i;
+    for(i=0;i<N;i++)
     {
-        arr[i-1]-=i;
-        while(1)
+        scanf("%d",&ara[i]);
+
+    }
+    int m= ara[0];
+    int secondMin=9999;
+    for(i=0;i<N;i++)
+    {
+        if(ara[i]<m)
         {
-            arr[i-1]+=i;
-            break;
+            secondMin=m;
+            m=ara[i];
         }
-        i-=1;
+        else if(ara[i] <secondMin )
+            secondMin = ara[i];
+
     }
-    for(j=0; j<5; j++)
-    {
-        printf("%d ",arr[j]);
-    }
+
+
+    printf("the second minimum value is %d\n",secondMin);
     return 0;
 }
